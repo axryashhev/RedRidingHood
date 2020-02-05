@@ -63,6 +63,8 @@
 
   var fps      = 60,
       step     = 1/fps,
+      health = 100,
+      health_display   = document.getElementById('health'),
       canvas   = document.getElementById('canvas'),
       ctx      = canvas.getContext('2d'),
       width    = canvas.width  = MAP.tw * TILE,
@@ -80,6 +82,7 @@
       sprite_player.src = SPRITE_GAME.PLAYER;
       sprite_moster.src = SPRITE_GAME.MONSTER;
       sprite_health.src = SPRITE_GAME.HEALTH;
+
 
 
   var t2p      = function(t)     { return t*TILE;                  },
@@ -148,11 +151,24 @@
     player.x = player.start.x;
     player.y = player.start.y;
     player.dx = player.dy = 0;
+    health -= 30;
+    if(health <= 0) {
+      alert('Game Over!');
+      health = 100;
+      health_display.innerHTML = health;
+    }
+    else {
+      health_display.innerHTML = health;
+    }
   }
 
   function collectTreasure(t) {
     player.collected++;
     t.collected = true;
+    if(health < 100) {
+      health += 5;
+      health_display.innerHTML = health;
+    }
   }
 
   function updateEntity(entity, dt) {

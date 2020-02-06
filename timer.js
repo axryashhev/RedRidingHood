@@ -2,9 +2,14 @@
     var seconds = 0;
     var minutes = 0;
 
+    function reset_timer() {
+        seconds = 0;
+        minutes = 0;
+    }
+
     function countup() {
         console.log('Working');
-        if(seconds < 60)
+        if(seconds < 59)
             seconds = seconds + 1;
         else {
             minutes = minutes + 1;

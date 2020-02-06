@@ -75,7 +75,11 @@ $(document).ready(function(e){
 				id:"opt-start-game",
 				title: "Start Game",
 				callback:function(){
-					showLoading();
+					function showGame() {
+						window.location.href = "game.html";
+					}
+
+					showGame();
 				}
 			},
 			loadGame:{

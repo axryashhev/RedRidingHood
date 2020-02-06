@@ -103,7 +103,9 @@
     }
   }
 
-
+  function gameOver() {
+    document.location.href = "GameOver.html";
+  }
 
   function update(dt) {
     updatePlayer(dt);
@@ -153,9 +155,7 @@
     player.dx = player.dy = 0;
     health -= 30;
     if(health <= 0) {
-      alert('Game Over!');
-      health = 100;
-      health_display.innerHTML = health;
+      gameOver();
     }
     else {
       health_display.innerHTML = health;

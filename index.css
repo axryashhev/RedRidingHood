@@ -1,11 +1,37 @@
-body            { background: #111; }
-#platformer     { margin: 1em auto; position: relative; width: 512px; height: 384px; }
-#canvas         { display: inline-block; width: 100%; height: 100%; }
-#instructions   { font-style: italic; color: #999; font-size: 9pt; margin-left: 1em; margin-top: 0.5em; }
-#instructions b { color: #DDD; }
-.attribute { color: white;}
-@media screen and (min-width:     0px) and (min-height:    0px) { #platformer { width:  512px; height: 384px; font-size:  7pt; } } /* block = 16 */
-@media screen and (min-width:   840px) and (min-height:  530px) { #platformer { width:  640px; height: 480px; font-size:  9pt; } } /* block = 20 */
-@media screen and (min-width:   968px) and (min-height:  626px) { #platformer { width:  768px; height: 576px; font-size: 11pt; } } /* block = 24 */
-@media screen and (min-width:  1096px) and (min-height:  722px) { #platformer { width:  896px; height: 672px; font-size: 13pt; } } /* block = 28 */
-@media screen and (min-width:  1224px) and (min-height:  818px) { #platformer { width: 1024px; height: 768px; font-size: 15pt; } } /* block = 32 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+#menu.main {
+  background-image: url('Background/pzapwisrt5dy.png');
+}
+#main {
+  height: 60%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#main h1 {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.button {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #AA2666;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: #FB1886;
+  background-image: -webkit-linear-gradient(bottom, #FB1886 0%, #B30D5D 100%);
+  background-image:         linear-gradient(to bottom, #FB1886 0%, #B30D5D 100%);
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #B30D5D;
+  background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
+  background-image:         linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
+}

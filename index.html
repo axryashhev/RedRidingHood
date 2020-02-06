@@ -1,40 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-  <title>RedRidingHood</title>
-
-  <link rel="stylesheet" href="index.css">
-
-</head>
-
+	<head>
+		<meta charset="utf-8"/>
+		<title>Game Menu 1.0</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="fonts/fonts.css"/>
+		<link rel="stylesheet" href="css/gamemenu.css"/>
+	</head>
 <body>
 
-  <div id="platformer">
+		<h1 class="main-font title">Game Menu</h1>
+		<ul id="main-menu"></ul>
+		<div id="loading">
+			<img id="loading-img" width="120" src="Background/giphy%20(2).gif"/>
+			<h2 class="main-font">Loading...</h2>
+		</div>
 
-    <div>
-      <p class="attribute">Health player: <b id="health">100</b>HP <br> Timer: <b id="timer">00:00</b></p>
-    </div>
+		<div id="credits" style="display:none;margin-left:40px;margin-top:60px;">
 
-    <canvas id="canvas">
-      <div class="unsupported">
-        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
-      </div>
-    </canvas>
+			<ul class="sub-menu" id="back-credits" style="top:0px;">
+				<li class="back">Back</li>
+			</ul>
 
-    <div id="instructions">
-      <b>LEFT/RIGHT</b> to move, <b>UP</b> to jump, collect heart and jump on wolfes.
-    </div>
+		</div>
 
-    <audio autoplay loop>
-        <source id="myAudio" src="Audio/Background_sound.mp3" type="audio/mpeg">
-      </audio>
+		<div id="assets">
+			<audio id="sfx-background" loop>
+				<source src="sound/background-music.ogg"></source>
+				<source src="sound/background-music.mp3"></source>
+			</audio>
+			<audio id="sfx-select">
+				<source src="sound/menu_select_1.ogg"></source>
+				<source src="sound/menu_select_1.mp3"></source>
+			</audio>
+			<audio id="sfx-move">
+				<source src="sound/menu_move_1.ogg"></source>
+				<source src="sound/menu_move_1.mp3"></source>
+			</audio>
+		</div>
 
-  </div>
-  <script src="timer.js"></script>
-  <script src="fpsmeter.min.js"></script>
-  <script src="platformer.js"></script>
 
 </body>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/gamemenu.js"></script>
+
 </html>

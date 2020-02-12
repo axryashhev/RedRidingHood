@@ -13,9 +13,25 @@ body {
 .title{
 	color: #ff1400;
 	position:relative;
-	top:30px;
+	bottom:140px;
 	right:5px;
     font-size: 102px;
+}
+.sub-menu {
+	color:#FFF;
+	list-style-type: none;
+	margin:0 auto;
+	display:none;
+	position:relative;
+	bottom:250px;
+	right:25px;
+	font-size:25px;
+	font-family: '8-bit_limit_brkregular';
+	display:inline-block;
+	cursor:pointer;
+}
+.sub-menu:hover {
+    color: #ff1400;
 }
 .div-title {
     height: 40em;

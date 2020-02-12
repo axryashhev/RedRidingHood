@@ -16,14 +16,17 @@
             seconds = 0;
         }
 
+        let out_minutes = minutes;
+        let out_seconds = seconds;
+
         if (minutes == 5) {
-            alert('TimeOut');
+            document.location.href = "GameOver.html";
         } else {
             // Update remaining seconds
-            // if (minutes < 10) minutes = "0" + minutes;
-            // if (seconds < 10) seconds = "0" + seconds;
+            if (minutes < 10) out_minutes = "0" + out_minutes;
+            if (seconds < 10) out_seconds = "0" + out_seconds;
 
-            document.getElementById("timer").innerHTML = minutes + ':' + seconds;
+            document.getElementById("timer").innerHTML = out_minutes + ':' + out_seconds;
             // Count down using javascript
             window.setTimeout("countup()", 1000);
         }

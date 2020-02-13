@@ -17,6 +17,9 @@ body {
 	right:5px;
     font-size: 102px;
 }
+a:visited {
+    color: #ff1400; /* Цвет посещенных ссылок */
+}
 .sub-menu {
 	color:#FFF;
 	list-style-type: none;

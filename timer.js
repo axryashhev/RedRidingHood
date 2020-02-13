@@ -8,7 +8,6 @@
     }
 
     function countup() {
-        console.log('Working');
         if(seconds < 59)
             seconds = seconds + 1;
         else {

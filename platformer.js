@@ -272,7 +272,6 @@
 
   function render(ctx, frame, dt) {
     ctx.clearRect(0, 0, width, height);
-    // console.log(width + ' ' + height);
     ctx.drawImage(background,0,0);
     renderMap(ctx);
     renderTreasure(ctx, frame);

@@ -78,7 +78,6 @@ $(document).ready(function(e){
 					function showGame() {
 						window.location.href = "game.html";
 					}
-
 					showGame();
 				}
 			},

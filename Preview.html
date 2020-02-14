@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screen saver</title>
+
+    <link rel="stylesheet" href="css/preview.css"/>
+</head>
+<body>
+
+    <video autoplay id="myVideo" onended="endVideo()">
+      <source src="video/videoplayback.mp4" type="video/mp4">
+    </video>
+
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+      <!-- Use a button to pause/play the video with JavaScript -->
+      <button id="button">skip</button>
+    </div>
+
+    <script src="preview.js"></script>
+
+</body>
+</html>

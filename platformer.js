@@ -147,6 +147,9 @@
   function killMonster(monster) {
     player.killed++;
     monster.dead = true;
+
+    if(player.killed === 8)
+      document.location.href = "GameWin.html";
   }
 
   function killPlayer(player) {
@@ -324,7 +327,6 @@
 
   function renderTreasure(ctx, frame) {
     // ctx.fillStyle   = COLOR.GOLD;
-
     ctx.globalAlpha = 0.25 + tweenTreasure(frame, 60);
     var n, max, t;
     for(n = 0, max = treasure.length ; n < max ; n++) {

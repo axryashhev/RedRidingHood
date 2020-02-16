@@ -107,6 +107,16 @@
     document.location.href = "GameOver.html";
   }
 
+  function gameWin() {
+    document.location = "GameWin.html?id=" + document.getElementById("points").innerText;
+  }
+
+  function addPoints(points) {
+    setPoints(points);
+    const out = document.getElementById("points");
+    out.innerHTML = getPoints();
+  }
+
   function update(dt) {
     updatePlayer(dt);
     updateMonsters(dt);
@@ -146,10 +156,11 @@
 
   function killMonster(monster) {
     player.killed++;
-    monster.dead = true;
+    monster.dead = true
+    addPoints(25);
 
     if(player.killed === 8)
-      document.location.href = "GameWin.html";
+      gameWin();
   }
 
   function killPlayer(player) {
@@ -163,6 +174,7 @@
     else {
       health_display.innerHTML = health;
     }
+    addPoints(-15);
   }
 
   function collectTreasure(t) {
@@ -172,6 +184,7 @@
       health += 5;
       health_display.innerHTML = health;
     }
+    addPoints(10);
   }
 
   function updateEntity(entity, dt) {

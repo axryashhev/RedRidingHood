@@ -9,20 +9,36 @@
 
 		<script language="javascript" type="text/javascript">
 			function OnLoad() {
-				var paramValue = window.location.href.split("?")[1].split("=")[1];
-				document.getElementById("points").innerHTML = paramValue;
+				const paramValue = window.location.href.split("?")[1].split("=")[1];
+				// document.getElementById("points").innerHTML = paramValue;
+                fetch('database.php?points='+paramValue);
 			}
 		</script>
 
 	</head>
-<body onload="OnLoad()">
+    <body onload="OnLoad()">
+
     <div class="div-title">
 		<h1 class="main-font title">You VICTORY!</h1>
     </div>
 
-	<h1 class="sub-menu">You points: <b id="points">0</b></h1><br>
+	<h1 class="sub-menu">You points:
+
+    <?php
+        error_reporting(0);
+
+        $points = $_GET["points"];
+
+        $points = is_numeric($points) ? $points : 0;
+
+        echo '<b id="points">'. $points .'</b>';
+    ?>
+
+    </h1><br>
+    <br>
+
 	<a class="sub-menu" href="game.html">Try again!</a><br>
-    <a class="sub-menu" href="index.html">Go to main menu!</a>
+    <a class="sub-menu" href="index.php">Go to main menu!</a>
 
 	<div id="assets">
 		<audio id="sfx-background">

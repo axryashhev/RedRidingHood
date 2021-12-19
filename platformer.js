@@ -108,7 +108,7 @@
   }
 
   function gameWin() {
-    document.location = "GameWin.html?id=" + document.getElementById("points").innerText;
+    document.location = "GameWin.html?points=" + document.getElementById("points").innerText;
   }
 
   function addPoints(points) {

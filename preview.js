@@ -6,10 +6,10 @@ button.addEventListener("click", function(e) {
 	video.pause();
 	video.currentTime = video.duration;
 // 	video.play();
-    document.location.href = 'index.html';
+    document.location.href = 'index.php';
 })
 
 
 function endVideo() {
-  document.location.href = 'index.html';
+  document.location.href = 'index.php';
 }
